@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  
+  <!-- Primary SEO Meta Tags -->
+  <title>SnapMedia — Fast & Free Social Media Downloader (Instagram & TikTok No Watermark)</title>
+  <meta name="title" content="SnapMedia — Fast & Free Social Media Downloader (Instagram & TikTok No Watermark)">
+  <meta name="description" content="Download Instagram Reels, Video, Foto, dan TikTok Video Tanpa Watermark kualitas HD serta Convert Audio MP3 secara instan, gratis, dan otomatis.">
+  <meta name="keywords" content="instagram downloader, tiktok downloader without watermark, download reel instagram, tiktok mp3 converter, unduh video tiktok tanpa watermark, snapmedia, cobalt tools alternative">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="SnapMedia">
+  <meta name="theme-color" content="#5865F2">
+  <link rel="canonical" href="http://localhost:3000/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://localhost:3000/">
+  <meta property="og:title" content="SnapMedia — Instagram & TikTok Downloader (No Watermark HD)">
+  <meta property="og:description" content="Download Video Reels Instagram dan TikTok Tanpa Watermark kualitas HD serta ekstraksi musik MP3 gratis dan cepat.">
+  <meta property="og:site_name" content="SnapMedia">
+  <meta property="og:locale" content="id_ID">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="http://localhost:3000/">
+  <meta name="twitter:title" content="SnapMedia — Instagram & TikTok Downloader">
+  <meta name="twitter:description" content="Download Video Reels Instagram dan TikTok Tanpa Watermark kualitas HD dan audio MP3 instan.">
+
+  <!-- PWA Manifest & Favicon -->
+  <link rel="manifest" href="/manifest.json">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%235865F2'><path d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z'/></svg>">
+
+  <!-- WPO Resource Hints (Preconnect & DNS-Prefetch) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="dns-prefetch" href="https://api.saipulanuar.eu.org">
+
+  <!-- Optimized Fonts (display=swap for zero FOIT) -->
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Bootstrap Icons CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <!-- SweetAlert2 CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            cobalt: {
+              DEFAULT: '#5865F2',
+              hover: '#4752C4',
+              light: '#7983F5',
+              glow: 'rgba(88, 101, 242, 0.35)',
+            },
+            surface: {
+              950: '#0a0c10',
+              900: '#11141a',
+              850: '#171b22',
+              800: '#1e232d',
+              700: '#2d3340',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- JSON-LD Structured Data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "SnapMedia Downloader",
+    "url": "http://localhost:3000",
+    "description": "Online media downloader for Instagram Reels and TikTok videos without watermark in HD and MP3 audio.",
+    "applicationCategory": "MultimediaApplication",
+    "operatingSystem": "All",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "featureList": [
+      "TikTok Video Downloader Without Watermark",
+      "TikTok Audio MP3 Extractor",
+      "Instagram Reels and Post Downloader",
+      "Auto-detect Platform",
+      "Fast Direct Download Stream Proxy"
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Bagaimana cara download video TikTok tanpa watermark?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Salin tautan video dari aplikasi TikTok, tempel di kolom pencarian SnapMedia, lalu klik tombol download untuk menyimpan video HD tanpa watermark."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Apakah SnapMedia bisa mengunduh Reels Instagram?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ya, SnapMedia mendukung pengunduhan video Instagram Reels dan Postingan publik dengan resolusi tinggi."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Apakah layanan ini gratis?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ya, 100% gratis tanpa batasan kuota harian dan tanpa perlu registrasi."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="bg-surface-950 text-slate-200 min-h-screen flex flex-col font-sans antialiased selection:bg-cobalt selection:text-white">
+
+  <!-- Ambient Glow -->
+  <div class="fixed inset-0 pointer-events-none overflow-hidden -z-10" aria-hidden="true">
+    <div class="cobalt-ambient-glow"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="w-full max-w-5xl mx-auto px-4 sm:px-6 pt-6 sm:pt-10 flex items-center justify-between">
+    <!-- Brand -->
+    <a href="/" class="flex items-center gap-2.5 group" aria-label="SnapMedia Home">
+      <div class="w-8 h-8 rounded-xl bg-cobalt flex items-center justify-center text-white shadow-lg shadow-cobalt-glow group-hover:scale-105 transition-transform duration-200">
+        <i class="bi bi-play-fill text-lg" aria-hidden="true"></i>
+      </div>
+      <span class="text-xl font-extrabold tracking-tight text-white font-mono lowercase">snap<span class="text-cobalt">media</span></span>
+    </a>
+
+    <!-- Top Action Badges -->
+    <nav class="flex items-center gap-2" aria-label="Quick Actions">
+      <!-- Quick Mode Toggle -->
+      <div class="hidden sm:flex items-center p-1 rounded-xl bg-surface-850 border border-surface-700/60 text-xs font-mono">
+        <button id="modeAutoBtn" class="mode-pill active px-2.5 py-1 rounded-lg text-slate-300 transition-colors" title="Download video otomatis">auto</button>
+        <button id="modeAudioBtn" class="mode-pill px-2.5 py-1 rounded-lg text-slate-400 hover:text-white transition-colors" title="Download audio MP3 saja">audio only</button>
+      </div>
+
+      <!-- History Button -->
+      <button id="historyBtn" class="p-2 sm:px-3 sm:py-1.5 rounded-xl bg-surface-850 hover:bg-surface-800 border border-surface-700/60 text-slate-300 hover:text-white text-xs font-mono flex items-center gap-1.5 transition-all" aria-label="Lihat Riwayat">
+        <i class="bi bi-clock-history text-sm" aria-hidden="true"></i>
+        <span class="hidden sm:inline">history</span>
+        <span id="historyCountBadge" class="hidden px-1.5 py-0.2 rounded-md bg-cobalt text-white font-bold text-[10px]">0</span>
+      </button>
+
+      <!-- Settings Dropdown Toggle -->
+      <button id="settingsToggleBtn" class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-surface-850 hover:bg-surface-800 border border-surface-700/60 text-slate-300 hover:text-white flex items-center justify-center transition-all" aria-label="Pengaturan" title="Pengaturan">
+        <i class="bi bi-sliders text-sm" aria-hidden="true"></i>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Main Container -->
+  <main class="flex-grow flex flex-col items-center justify-center px-4 sm:px-6 py-10 sm:py-16 max-w-4xl mx-auto w-full">
+
+    <!-- Central Hero Title -->
+    <header class="text-center mb-8 sm:mb-12">
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mb-3 font-mono lowercase">
+        save what you <span class="text-cobalt">love</span>.
+      </h1>
+      <p class="text-slate-400 text-xs sm:text-sm font-mono max-w-md mx-auto">
+        no ads, no tracking, pure speed. paste instagram or tiktok link.
+      </p>
+    </header>
+
+    <!-- Central Unified Cobalt-Style Input Form -->
+    <div class="w-full max-w-2xl relative">
+      <form id="downloadForm" class="relative group" role="search">
+        <div id="inputWrapper" class="cobalt-input-box p-2 sm:p-2.5 rounded-2xl sm:rounded-3xl bg-surface-900 border border-surface-700/80 shadow-2xl flex items-center gap-2 transition-all duration-300 focus-within:border-cobalt focus-within:shadow-[0_0_30px_rgba(88,101,242,0.25)]">
+          
+          <!-- Adaptive Platform Indicator Icon (Left) -->
+          <div class="pl-3 pr-1 flex items-center justify-center text-slate-400">
+            <span id="platformIconIndicator" class="text-xl transition-all duration-300" aria-hidden="true">
+              <i class="bi bi-link-45deg text-slate-500"></i>
+            </span>
+          </div>
+
+          <!-- URL Input Field -->
+          <input 
+            type="url" 
+            id="urlInput"
+            name="url"
+            placeholder="paste a link here..."
+            required
+            autocomplete="off"
+            spellcheck="false"
+            aria-label="Tautan video Instagram atau TikTok"
+            class="w-full bg-transparent px-2 py-3 text-slate-100 placeholder-slate-500 text-sm sm:text-base outline-none font-mono font-medium selection:bg-cobalt"
+          >
+
+          <!-- Input Action Group (Paste & Clear) -->
+          <div class="flex items-center gap-1.5 pr-1">
+            <button 
+              type="button" 
+              id="clearInputBtn" 
+              title="Bersihkan (Esc)"
+              aria-label="Bersihkan input"
+              class="hidden w-8 h-8 rounded-xl text-slate-400 hover:text-white hover:bg-surface-800 flex items-center justify-center transition-colors">
+              <i class="bi bi-x-lg text-xs" aria-hidden="true"></i>
+            </button>
+
+            <button 
+              type="button" 
+              id="pasteBtn" 
+              title="Tempel dari Clipboard (Ctrl+V)"
+              aria-label="Tempel tautan"
+              class="hidden sm:flex items-center gap-1.5 px-3 py-2 rounded-xl bg-surface-850 hover:bg-surface-800 border border-surface-700 text-slate-300 hover:text-white text-xs font-mono font-medium transition-all">
+              <i class="bi bi-clipboard text-xs" aria-hidden="true"></i>
+              <span>paste</span>
+            </button>
+
+            <!-- Submit Button -->
+            <button 
+              type="submit" 
+              id="submitBtn"
+              title="Download Media (Enter)"
+              aria-label="Download Media"
+              class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-cobalt hover:bg-cobalt-hover active:scale-95 text-white flex items-center justify-center shadow-lg shadow-cobalt-glow transition-all duration-200 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed">
+              <i id="submitIcon" class="bi bi-arrow-right text-xl font-bold" aria-hidden="true"></i>
+            </button>
+          </div>
+
+        </div>
+      </form>
+
+      <!-- Settings Dropdown Drawer (Collapsible) -->
+      <div id="settingsPanel" class="hidden mt-3 p-4 rounded-2xl bg-surface-900 border border-surface-700/80 shadow-2xl animate-scale-up font-mono text-xs text-slate-300 space-y-3" role="region" aria-label="Quick Settings">
+        <div class="flex items-center justify-between pb-2 border-b border-surface-800">
+          <span class="font-bold text-white uppercase tracking-wider text-[11px]">quick settings</span>
+          <span class="text-[10px] text-slate-500">auto-saved</span>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <label class="flex items-center justify-between p-2.5 rounded-xl bg-surface-850 border border-surface-800 cursor-pointer hover:border-surface-700">
+            <span>audio only (mp3)</span>
+            <input type="checkbox" id="settingAudioOnly" class="rounded accent-cobalt w-4 h-4 cursor-pointer">
+          </label>
+
+          <label class="flex items-center justify-between p-2.5 rounded-xl bg-surface-850 border border-surface-800 cursor-pointer hover:border-surface-700">
+            <span>auto-download immediately</span>
+            <input type="checkbox" id="settingAutoSave" class="rounded accent-cobalt w-4 h-4 cursor-pointer">
+          </label>
+        </div>
+      </div>
+
+      <!-- Quick Sample Buttons -->
+      <div class="mt-4 flex flex-wrap items-center justify-center gap-2 text-xs font-mono text-slate-500">
+        <span>try sample:</span>
+        <button type="button" class="sample-link-btn px-2 py-0.5 rounded-md bg-surface-900 hover:bg-surface-850 border border-surface-800 text-pink-400 hover:text-pink-300 transition-colors" data-sample="https://www.instagram.com/reel/DQrg6e6kpkU/?hl=id">
+          instagram
+        </button>
+        <button type="button" class="sample-link-btn px-2 py-0.5 rounded-md bg-surface-900 hover:bg-surface-850 border border-surface-800 text-cyan-400 hover:text-cyan-300 transition-colors" data-sample="https://vt.tiktok.com/ZSrYfB8tJ/">
+          tiktok
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Cobalt-style Processing State -->
+    <section id="processingSection" class="hidden w-full max-w-2xl mt-8 animate-scale-up" aria-live="polite">
+      <div class="p-5 rounded-2xl bg-surface-900 border border-surface-700/80 shadow-2xl flex items-center gap-4">
+        <div class="w-8 h-8 rounded-full border-2 border-cobalt/30 border-t-cobalt animate-spin flex-shrink-0" aria-hidden="true"></div>
+        <div class="flex-grow min-w-0">
+          <div class="flex items-center gap-2 mb-1">
+            <span id="procPlatformTag" class="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-surface-800 text-slate-300">AUTO</span>
+            <span class="text-xs font-mono font-semibold text-white truncate" id="procStatusText">tunneling stream...</span>
+          </div>
+          <div class="w-full bg-surface-800 rounded-full h-1 overflow-hidden">
+            <div class="bg-cobalt h-1 rounded-full animate-progress"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cobalt-style Result Card -->
+    <article id="resultSection" class="hidden w-full max-w-2xl mt-8 animate-scale-up" aria-live="polite">
+      <div class="p-5 sm:p-6 rounded-3xl bg-surface-900 border border-surface-700/80 shadow-2xl relative overflow-hidden">
+        
+        <!-- Top Status Bar -->
+        <div class="flex items-center justify-between pb-4 border-b border-surface-800 mb-5">
+          <div class="flex items-center gap-2 font-mono">
+            <span id="resPlatformBadge" class="text-xs font-bold px-2.5 py-1 rounded-lg"></span>
+            <span class="text-[11px] text-emerald-400 flex items-center gap-1 font-semibold">
+              <i class="bi bi-check-circle-fill" aria-hidden="true"></i> ready
+            </span>
+          </div>
+          <button id="resDismissBtn" class="text-slate-400 hover:text-white p-1 rounded-lg hover:bg-surface-800 transition-colors" title="Tutup" aria-label="Tutup Hasil">
+            <i class="bi bi-x-lg text-sm" aria-hidden="true"></i>
+          </button>
+        </div>
+
+        <!-- Result Body -->
+        <div class="flex flex-col sm:flex-row gap-5 items-start">
+          
+          <!-- Media Preview (Thumbnail / Video) -->
+          <div class="w-full sm:w-44 rounded-2xl overflow-hidden bg-surface-950 border border-surface-800 flex-shrink-0 relative group aspect-video sm:aspect-square flex items-center justify-center">
+            <video id="resVideoPlayer" controls playsinline preload="metadata" class="w-full h-full object-contain bg-black">
+              <source id="resVideoSource" src="" type="video/mp4">
+            </video>
+            <img id="resThumbnail" src="" alt="Media Thumbnail" loading="lazy" decoding="async" class="hidden w-full h-full object-cover">
+          </div>
+
+          <!-- Metadata & Actions -->
+          <div class="flex-grow min-w-0 flex flex-col justify-between w-full space-y-4">
+            <div>
+              <h2 id="resTitle" class="text-base font-bold text-white mb-1.5 leading-snug line-clamp-2"></h2>
+              <p id="resAudioTitle" class="text-xs text-slate-400 font-mono flex items-center gap-1.5 truncate">
+                <i class="bi bi-music-note-beamed text-cobalt" aria-hidden="true"></i>
+                <span id="resAudioText"></span>
+              </p>
+            </div>
+
+            <!-- Download Buttons Cluster -->
+            <div class="space-y-2 pt-2">
+              <!-- Primary Download Button -->
+              <a 
+                id="resPrimaryDownloadBtn" 
+                href="#" 
+                class="w-full py-3 px-5 rounded-xl bg-cobalt hover:bg-cobalt-hover active:scale-[0.99] text-white font-mono font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-cobalt-glow transition-all"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="bi bi-download" aria-hidden="true"></i>
+                <span id="resPrimaryBtnLabel">save video (.mp4)</span>
+              </a>
+
+              <!-- Secondary Audio Button (if available) -->
+              <a 
+                id="resAudioDownloadBtn" 
+                href="#" 
+                class="hidden w-full py-2.5 px-4 rounded-xl bg-surface-850 hover:bg-surface-800 border border-surface-700 text-slate-200 font-mono text-xs font-semibold flex items-center justify-center gap-2 transition-all"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="bi bi-music-note text-cyan-400" aria-hidden="true"></i>
+                <span>save audio (.mp3)</span>
+              </a>
+
+              <!-- Secondary action buttons -->
+              <div class="grid grid-cols-2 gap-2 pt-1 font-mono text-xs">
+                <button 
+                  id="resCopyLinkBtn" 
+                  type="button" 
+                  class="py-2 px-3 rounded-lg bg-surface-850 hover:bg-surface-800 border border-surface-800 text-slate-300 hover:text-white flex items-center justify-center gap-1.5 transition-colors">
+                  <i class="bi bi-link-45deg" aria-hidden="true"></i>
+                  <span>copy link</span>
+                </button>
+                <button 
+                  id="resShareBtn" 
+                  type="button" 
+                  class="py-2 px-3 rounded-lg bg-surface-850 hover:bg-surface-800 border border-surface-800 text-slate-300 hover:text-white flex items-center justify-center gap-1.5 transition-colors">
+                  <i class="bi bi-share" aria-hidden="true"></i>
+                  <span>share</span>
+                </button>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </article>
+
+  </main>
+
+  <!-- History Modal / Drawer -->
+  <div id="historyDrawer" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4 font-mono" role="dialog" aria-modal="true" aria-labelledby="historyHeading">
+    <div class="bg-surface-900 border border-surface-700 rounded-3xl w-full max-w-lg max-h-[80vh] flex flex-col shadow-2xl overflow-hidden animate-scale-up">
+      
+      <!-- Header -->
+      <div class="p-4 border-b border-surface-800 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <i class="bi bi-clock-history text-cobalt" aria-hidden="true"></i>
+          <h2 id="historyHeading" class="font-bold text-white text-sm lowercase">download history</h2>
+        </div>
+        <div class="flex items-center gap-2">
+          <button id="clearHistoryBtn" class="text-xs text-rose-400 hover:text-rose-300 px-2 py-1 rounded hover:bg-rose-500/10 transition-colors">
+            clear all
+          </button>
+          <button id="closeHistoryBtn" class="w-7 h-7 rounded-lg text-slate-400 hover:text-white hover:bg-surface-800 flex items-center justify-center transition-colors" aria-label="Tutup riwayat">
+            <i class="bi bi-x-lg text-xs" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- History List -->
+      <div id="historyListContainer" class="p-4 overflow-y-auto space-y-2 flex-grow custom-scrollbar">
+        <!-- Rendered via history.js -->
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Keyboard Shortcuts & Footer (Cobalt Style) -->
+  <footer class="w-full max-w-5xl mx-auto px-4 py-8 text-center text-xs font-mono text-slate-500 border-t border-surface-850">
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-3">
+      <div class="flex items-center gap-4 text-[11px] text-slate-500">
+        <span><kbd class="px-1.5 py-0.5 bg-surface-850 rounded border border-surface-700 text-slate-300">enter</kbd> download</span>
+        <span><kbd class="px-1.5 py-0.5 bg-surface-850 rounded border border-surface-700 text-slate-300">ctrl+v</kbd> paste</span>
+        <span><kbd class="px-1.5 py-0.5 bg-surface-850 rounded border border-surface-700 text-slate-300">esc</kbd> clear</span>
+      </div>
+
+      <div class="text-[11px] text-slate-600">
+        powered by <a href="https://api.saipulanuar.eu.org" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-cobalt underline transition-colors">saipulanuar API</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/history.js" defer></script>
+  <script src="/js/app.js" defer></script>
+</body>
+</html>

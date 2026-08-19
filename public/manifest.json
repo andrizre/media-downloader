@@ -1,0 +1,17 @@
+{
+  "name": "SnapMedia — Media Downloader",
+  "short_name": "SnapMedia",
+  "description": "Download Instagram & TikTok Videos Without Watermark in HD and convert audio MP3.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0c10",
+  "theme_color": "#5865F2",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%235865F2'><path d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z'/></svg>",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

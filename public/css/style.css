@@ -1,0 +1,72 @@
+/* Cobalt-Style Aesthetics */
+
+:root {
+  --cobalt-primary: #5865F2;
+  --cobalt-glow: rgba(88, 101, 242, 0.35);
+}
+
+/* Ambient glow */
+.cobalt-ambient-glow {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 350px;
+  background: radial-gradient(ellipse at center, rgba(88, 101, 242, 0.15) 0%, rgba(14, 16, 21, 0) 70%);
+  filter: blur(80px);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* Mode Pills */
+.mode-pill.active {
+  background-color: var(--cobalt-primary);
+  color: #ffffff !important;
+  box-shadow: 0 2px 8px var(--cobalt-glow);
+}
+
+/* Progress bar animation */
+@keyframes progressAnim {
+  0% { transform: translateX(-100%); }
+  50% { transform: translateX(0%); }
+  100% { transform: translateX(100%); }
+}
+
+.animate-progress {
+  animation: progressAnim 1.2s ease-in-out infinite;
+}
+
+/* Scale up animation */
+@keyframes scaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-scale-up {
+  animation: scaleUp 0.18s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(17, 20, 26, 0.5);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(88, 101, 242, 0.4);
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(88, 101, 242, 0.8);
+}
